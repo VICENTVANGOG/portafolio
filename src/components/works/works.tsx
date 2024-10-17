@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface WorkItem {
@@ -7,15 +6,76 @@ interface WorkItem {
   image: string;
   link: string;
   description: string;
+  techImages: string[];
 }
 
 const workItems: WorkItem[] = [
-  { title: 'RiwiShop', image: '/riwiShop.png', link: 'https://github.com/VICENTVANGOG/prueba-de-desempe-o-.git', description: 'Ecomerce' },
-  { title: 'Pawhome', image: '/pawhome.png', link: 'https://pawhome.vercel.app/', description: 'adoption center' },
-  { title: 'todo list', image: '/tareas.png', link: 'https://github.com/VICENTVANGOG/crud-post-.git', description: 'gestor de tareas' },
-  { title: 'pruductIn', image: '/gestorproductos.png', link: 'https://github.com/jucrojasba/uno.git', description: 'gestor de productos' },
-  { title: 'Books', image: '/libro.png', link: 'https://github.com/VICENTVANGOG/use-api-books.git', description: 'Api creacion de libros' },
-  { title: 'Flor', image: '/flor.png', link: 'https://flor-amarilla-six.vercel.app/', description: 'flor para regalar' },
+  {
+    title: 'RiwiShop',
+    image: '/riwiShop.png',
+    link: 'https://github.com/VICENTVANGOG/prueba-de-desempe-o-.git',
+    description: 'E-commerce',
+    techImages: [
+      'https://techblog.istyle.co.jp/wp-content/uploads/2021/12/typescript.png',
+      'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png', 
+      'https://pluginicons.craft-cdn.com/scssqTY8srJEesn2VFiUV73mUCyRIZsfXfDj2eOY.svg?1528091210' 
+    ],
+  },
+  {
+    title: 'Pawhome',
+    image: '/pawhome.png',
+    link: 'https://pawhome.vercel.app/',
+    description: 'Adoption center',
+    techImages: [
+      'https://techblog.istyle.co.jp/wp-content/uploads/2021/12/typescript.png', 
+      'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png', 
+      'https://pluginicons.craft-cdn.com/scssqTY8srJEesn2VFiUV73mUCyRIZsfXfDj2eOY.svg?1528091210' 
+    ],
+  },
+  {
+    title: 'Todo List',
+    image: '/tareas.png',
+    link: 'https://github.com/VICENTVANGOG/to-do-list.git',
+    description: 'Gestor de tareas',
+    techImages: [
+      'https://techblog.istyle.co.jp/wp-content/uploads/2021/12/typescript.png', 
+      'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png', 
+      'https://cdn-icons-png.flaticon.com/512/919/919826.png' 
+    ],
+  },
+  {
+    title: 'ProductIn',
+    image: '/gestorproductos.png',
+    link: 'https://github.com/jucrojasba/uno.git',
+    description: 'Gestor de productos',
+    techImages: [
+      'https://techblog.istyle.co.jp/wp-content/uploads/2021/12/typescript.png', 
+      'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png', 
+      'https://cdn-icons-png.flaticon.com/512/919/919826.png' 
+    ],
+  },
+  {
+    title: 'Books',
+    image: '/libro.png',
+    link: 'https://github.com/VICENTVANGOG/use-api-books.git',
+    description: 'API creación de libros',
+    techImages: [
+      'https://techblog.istyle.co.jp/wp-content/uploads/2021/12/typescript.png', 
+      'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png', 
+      'https://cdn-icons-png.flaticon.com/512/919/919826.png' 
+    ],
+  },
+  {
+    title: 'Flor',
+    image: '/flor.png',
+    link: 'https://flor-amarilla-six.vercel.app/',
+    description: 'Flor para regalar',
+    techImages: [
+      'https://techblog.istyle.co.jp/wp-content/uploads/2021/12/typescript.png', 
+      'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.png', 
+      'https://cdn-icons-png.flaticon.com/512/919/919826.png' 
+    ],
+  },
 ];
 
 const PortfolioItem: React.FC<WorkItem> = ({ title, image, link, description }) => {
@@ -23,18 +83,15 @@ const PortfolioItem: React.FC<WorkItem> = ({ title, image, link, description }) 
 
   return (
     <Link href={link} passHref>
-      <div 
+      <div
         className="relative rounded-lg overflow-hidden cursor-pointer transition-all duration-300 transform hover:scale-105"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <Image
+        <img
           src={image}
           alt={title}
-          width={300}
-          height={200}
-          layout="responsive"
-          className="object-cover"
+          className="object-cover w-full h-auto"
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
           <h2 className="text-white text-xl font-semibold">{title}</h2>
@@ -55,7 +112,14 @@ const PortfolioGrid: React.FC = () => {
       <h1 className="text-4xl font-bold text-center mb-8 text-yellow-400">My WORK</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {workItems.map((item, index) => (
-          <PortfolioItem key={index} {...item} />
+          <div key={index}>
+            <PortfolioItem {...item} />
+            <div className="flex flex-wrap gap-2 mt-2">
+              {item.techImages.map((img, techIndex) => (
+                <img key={techIndex} src={img} alt={`Tech logo ${techIndex}`} className="h-6 w-6" />
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </div>

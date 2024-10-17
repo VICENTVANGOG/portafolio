@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Download, MessageCircle, Instagram, Facebook, Linkedin, Github } from 'lucide-react';
+import { Download, MessageCircle,Briefcase, Instagram, Facebook, Linkedin, Github } from 'lucide-react';
 
 export default function About() {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
@@ -24,12 +24,19 @@ export default function About() {
             <h1 className="text-5xl font-bold mb-4">Jose Miguel,</h1>
             <p className="text-2xl mb-6">I'm a Frontend Developer.</p>
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <button className="bg-yellow-400 text-purple-900 hover:bg-yellow-500 py-3 px-6 rounded">
+            <a href="/hoja de vida.pdf" download className="bg-yellow-400 text-purple-900 hover:bg-yellow-500 py-3 px-6 rounded flex items-center">
                 <Download className="mr-2 h-5 w-5" /> Download CV
-              </button>
-              <button className="border-white text-white hover:bg-white hover:text-purple-900 py-3 px-6 rounded">
-                <MessageCircle className="mr-2 h-5 w-5" /> Let's talk
-              </button>
+              </a>
+              <a href="#contact">
+                <button className="border-white text-white hover:bg-white hover:text-purple-900 py-3 px-6 rounded">
+                  <MessageCircle className="mr-2 h-5 w-5" /> Let's talk
+                </button>
+              </a>
+              <a href="#my-work">
+                <button className="border-white text-white hover:bg-white hover:text-purple-900 py-3 px-6 rounded">
+                  <Briefcase className="mr-2 h-5 w-5" /> My Projects
+                </button>
+              </a>
             </div>
             <div className="flex space-x-6 mt-4">
               {iconComponents.map(({ name, component: Icon, hoverColor, link }) => (
