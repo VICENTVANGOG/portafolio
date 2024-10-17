@@ -22,14 +22,14 @@ export default function About() {
           <div className="flex-1">
             <h2 className="text-2xl mb-2">Hello, My name is</h2>
             <h1 className="text-5xl font-bold mb-4">Jose Miguel,</h1>
-            <p className="text-2xl mb-6">I'm a Frontend Developer.</p>
+            <p className="text-2xl mb-6">Im a Frontend Developer.</p>
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
             <a href="/hoja de vida.pdf" download className="bg-yellow-400 text-purple-900 hover:bg-yellow-500 py-3 px-6 rounded flex items-center">
                 <Download className="mr-2 h-5 w-5" /> Download CV
               </a>
               <a href="#contact">
                 <button className="border-white text-white hover:bg-white hover:text-purple-900 py-3 px-6 rounded">
-                  <MessageCircle className="mr-2 h-5 w-5" /> Let's talk
+                  <MessageCircle className="mr-2 h-5 w-5" /> Lets talk
                 </button>
               </a>
               <a href="#my-work">

@@ -55,7 +55,7 @@ export default function SkillsCarousel() {
 
         <div className="flex justify-center space-x-8 mx-8 w-full">
           <AnimatePresence mode="popLayout">
-            {displayedSkills.map((skill, index) => (
+            {displayedSkills.map((skill) => (
               <motion.div
                 key={skill.name}
                 initial={{ opacity: 0, y: 50 }}

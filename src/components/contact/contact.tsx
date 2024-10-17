@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
   };
 
   const validateForm = (): boolean => {
-    let tempErrors: Partial<FormData> = {};
+    const tempErrors: Partial<FormData> = {};
     if (!formData.name.trim()) tempErrors.name = "Name is required";
     if (!formData.email.trim()) {
       tempErrors.email = "Email is required";
