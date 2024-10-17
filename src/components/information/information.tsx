@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { Download, MessageCircle, Instagram, Facebook, Linkedin, Github } from 'lucide-react'
+import React, { useState } from 'react';
+import { Download, MessageCircle, Instagram, Facebook, Linkedin, Github } from 'lucide-react';
 
-export default function Component() {
+export default function About() {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
 
   const iconComponents = [
@@ -16,26 +16,26 @@ export default function Component() {
   };
 
   return (
-    <div className="bg-purple-900 text-white min-h-screen flex items-center justify-center p-4">
+    <div className="bg-purple-900 text-white min-h-screen flex items-center justify-center p-8">
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-1">
-            <h2 className="text-xl mb-2">Hello, My name is</h2>
-            <h1 className="text-4xl font-bold mb-4">Jose Miguel,</h1>
-            <p className="text-xl mb-6">I'm a Frontend developer.</p>
+            <h2 className="text-2xl mb-2">Hello, My name is</h2>
+            <h1 className="text-5xl font-bold mb-4">Jose Miguel,</h1>
+            <p className="text-2xl mb-6">I'm a Frontend Developer.</p>
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <button className="bg-yellow-400 text-purple-900 hover:bg-yellow-500">
-                <Download className="mr-2 h-4 w-4" /> Download CV
+              <button className="bg-yellow-400 text-purple-900 hover:bg-yellow-500 py-3 px-6 rounded">
+                <Download className="mr-2 h-5 w-5" /> Download CV
               </button>
-              <button  className="border-white text-white hover:bg-white hover:text-purple-900">
-                <MessageCircle className="mr-2 h-4 w-4" /> Let's talk
+              <button className="border-white text-white hover:bg-white hover:text-purple-900 py-3 px-6 rounded">
+                <MessageCircle className="mr-2 h-5 w-5" /> Let's talk
               </button>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-6 mt-4">
               {iconComponents.map(({ name, component: Icon, hoverColor, link }) => (
                 <a href={link} target="_blank" rel="noopener noreferrer" key={name}>
                   <Icon
-                    className={`w-6 h-6 cursor-pointer transition-colors duration-200 ${
+                    className={`w-8 h-8 cursor-pointer transition-colors duration-200 ${
                       hoveredIcon === name ? hoverColor : "text-white"
                     }`}
                     onMouseEnter={() => handleIconHover(name)}
@@ -59,5 +59,5 @@ export default function Component() {
         </div>
       </div>
     </div>
-  )
+  );
 }

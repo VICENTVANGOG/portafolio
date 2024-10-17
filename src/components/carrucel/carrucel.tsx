@@ -39,7 +39,7 @@ export default function SkillsCarousel() {
   ];
 
   return (
-    <div className="bg-purple-800 text-white py-12 w-full">
+    <div className="bg-purple-800 text-white py-12 w-full" id="my-skills">
       <h2 className="text-4xl font-bold text-center mb-6">Skills</h2>
       <p className="text-center text-purple-200 mb-8">
         Below, you will find a summary of my skills as a developer.

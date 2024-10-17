@@ -45,7 +45,7 @@ const ServiceCard: React.FC<Service> = ({ icon, title, items }) => (
 
 const MyServices: React.FC = () => {
   return (
-    <div className="bg-purple-950 flex items-center justify-center py-2"> 
+    <div className="bg-purple-950 flex items-center justify-center py-2" id="services"> 
       <div className="max-w-6xl w-full p-8"> 
         <h2 className="text-4xl font-bold text-center mb-8 text-yellow-400">My Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"> 
