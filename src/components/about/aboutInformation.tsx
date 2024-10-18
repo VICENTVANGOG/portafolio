@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Bio() {
   return (
-    <div className="bg-purple-900 text-white min-h-screen" id="about">
+    <div className="bg-purple-800 text-white min-h-screen" id="about">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
