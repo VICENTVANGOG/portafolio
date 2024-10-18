@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 const skills = [
   { name: 'MongoDB', icon: 'https://www.svgrepo.com/show/331488/mongodb.svg', percentage: 20 },
   { name: 'Firebase', icon: 'https://cdn.icon-icons.com/icons2/691/PNG/512/google_firebase_icon-icons.com_61474.png', percentage: 20 },
@@ -13,6 +14,9 @@ const skills = [
   { name: 'CSS', icon: 'https://cdn-icons-png.flaticon.com/512/919/919826.png', percentage: 65 },
   { name: 'SASS', icon: 'https://pluginicons.craft-cdn.com/scssqTY8srJEesn2VFiUV73mUCyRIZsfXfDj2eOY.svg?1528091210', percentage: 50 },
   { name: 'TypeScript', icon: 'https://techblog.istyle.co.jp/wp-content/uploads/2021/12/typescript.png', percentage: 40 },
+  { name: 'Figma', icon: 'https://cdn.icon-icons.com/icons2/3206/PNG/512/figma_icon_195980.png', percentage: 25 },
+  { name: 'Github', icon: 'https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/github-512.png', percentage: 25 },
+  { name: 'Git', icon: 'https://img.icons8.com/color/512/git.png', percentage: 25 },
 ];
 
 export default function SkillsCarousel() {
@@ -23,7 +27,7 @@ export default function SkillsCarousel() {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000); // Cambiar cada 5 segundos
+    const timer = setInterval(nextSlide, 5000); 
     return () => clearInterval(timer);
   }, []);
 
