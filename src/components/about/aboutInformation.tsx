@@ -54,10 +54,10 @@ export default function Bio() {
                 
                 <image
                     href="https://stickerly.pstatic.net/sticker_pack/Rvwdb0pKz2zwosljmBZ1w/BS7NHK/4/11551a2a-4599-4fb8-9532-4f67748f6825.png"
-                    x="60"
-                    y="60"
-                    height="80"
-                    width="80"
+                    x="50"
+                    y="50"
+                    height="100"
+                    width="100"
                     clipPath="url(#circleClip)"
                 />
                 </svg>

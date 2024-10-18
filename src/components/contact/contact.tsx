@@ -62,67 +62,69 @@ const ContactForm: React.FC = () => {
   
 
   return (
-    <div className="bg-purple-600 h-screen flex items-center justify-center" id="contact">
-      <div className="bg-purple-800 p-12 rounded-lg shadow-lg w-2/5 mx-auto text-white">
-        <h2 className="text-4xl mb-6 text-center">Contact Me</h2>
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="name" className="block mb-2 font-semibold">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full p-4 rounded-lg bg-purple-700 text-white border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-colors"
-            />
-            {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
-          </div>
-          <div>
-            <label htmlFor="email" className="block mb-2 font-semibold">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full p-4 rounded-lg bg-purple-700 text-white border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-colors"
-            />
-            {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
-          </div>
-          <div>
-            <label htmlFor="subject" className="block mb-2 font-semibold">Subject</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              className="w-full p-4 rounded-lg bg-purple-700 text-white border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-colors"
-            />
-            {errors.subject && <p className="text-red-400 text-sm mt-1">{errors.subject}</p>}
-          </div>
-          <div>
-            <label htmlFor="message" className="block mb-2 font-semibold">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows={5}
-              className="w-full p-4 rounded-lg bg-purple-700 text-white border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-colors"
-            ></textarea>
-            {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-purple-600 text-white px-4 py-3 rounded-lg hover:bg-purple-700 transition-colors"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
+    <div className="bg-purple-600 min-h-screen flex items-start justify-center p-5 pt-20" id="contact">
+    <div className="bg-purple-800 p-6 sm:p-8 md:p-12 rounded-lg shadow-lg w-full sm:w-4/5 md:w-3/5 lg:w-2/5 mx-auto text-white">
+      <h2 className="text-3xl sm:text-2xl md:text-4xl mb-6 text-center">Contact Me</h2>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label htmlFor="name" className="block mb-2 font-semibold">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full p-3 sm:p-4 rounded-lg bg-purple-700 text-white border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-colors"
+          />
+          {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
+        </div>
+        <div>
+          <label htmlFor="email" className="block mb-2 font-semibold">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full p-3 sm:p-4 rounded-lg bg-purple-700 text-white border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-colors"
+          />
+          {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
+        </div>
+        <div>
+          <label htmlFor="subject" className="block mb-2 font-semibold">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+            className="w-full p-3 sm:p-4 rounded-lg bg-purple-700 text-white border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-colors"
+          />
+          {errors.subject && <p className="text-red-400 text-sm mt-1">{errors.subject}</p>}
+        </div>
+        <div>
+          <label htmlFor="message" className="block mb-2 font-semibold">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            rows={5}
+            className="w-full p-3 sm:p-4 rounded-lg bg-purple-700 text-white border border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300 transition-colors"
+          ></textarea>
+          {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-purple-600 text-white px-3 sm:px-4 py-2 sm:py-3 rounded-lg hover:bg-purple-700 transition-colors"
+        >
+          Send Message
+        </button>
+      </form>
     </div>
+  </div>
+  
+  
   );
 };
 

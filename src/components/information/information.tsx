@@ -58,8 +58,8 @@ export default function About() {
               alt="Jose Miguel"
               className="rounded-full border-4 border-yellow-400"
               style={{
-                width: '400px',
-                height: '400px',
+                width: '300px',
+                height: '300px',
               }}
             />
           </div>

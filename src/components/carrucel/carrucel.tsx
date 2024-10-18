@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const skills = [
@@ -23,12 +22,8 @@ export default function SkillsCarousel() {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % skills.length);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + skills.length) % skills.length);
-  };
-
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(nextSlide, 5000); // Cambiar cada 5 segundos
     return () => clearInterval(timer);
   }, []);
 
@@ -45,14 +40,6 @@ export default function SkillsCarousel() {
         Below, you will find a summary of my skills as a developer.
       </p>
       <div className="flex justify-center items-center">
-        <button
-          onClick={prevSlide}
-          className="bg-purple-700 text-white p-2 rounded-full transition duration-300 hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400"
-          aria-label="Previous skill"
-        >
-          <ChevronLeft size={24} />
-        </button>
-
         <div className="flex justify-center space-x-8 mx-8 w-full">
           <AnimatePresence mode="popLayout">
             {displayedSkills.map((skill) => (
@@ -105,14 +92,6 @@ export default function SkillsCarousel() {
             ))}
           </AnimatePresence>
         </div>
-
-        <button
-          onClick={nextSlide}
-          className="bg-purple-700 text-white p-2 rounded-full transition duration-300 hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400"
-          aria-label="Next skill"
-        >
-          <ChevronRight size={24} />
-        </button>
       </div>
     </div>
   );

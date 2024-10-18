@@ -13,7 +13,7 @@ const workItems: WorkItem[] = [
   {
     title: 'RiwiShop',
     image: '/riwiShop.png',
-    link: 'https://github.com/VICENTVANGOG/prueba-de-desempe-o-.git',
+    link: 'https://riwi-shop-black.vercel.app/',
     description: 'E-commerce',
     techImages: [
       'https://techblog.istyle.co.jp/wp-content/uploads/2021/12/typescript.png',
@@ -35,7 +35,7 @@ const workItems: WorkItem[] = [
   {
     title: 'Todo List',
     image: '/tareas.png',
-    link: 'https://github.com/VICENTVANGOG/to-do-list.git',
+    link: 'https://list-gray-xi.vercel.app/',
     description: 'Gestor de tareas',
     techImages: [
       'https://techblog.istyle.co.jp/wp-content/uploads/2021/12/typescript.png', 
